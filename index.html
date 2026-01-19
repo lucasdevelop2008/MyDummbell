@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDumbbell - Seu App de Treinos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="container-notificacao" class="notification-container"></div>
+    <nav class="main-nav hidden" id="menu-principal">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-brand">
+                <i class="fas fa-dumbbell logo-icon"></i>
+                My Dumbbell</span>
+            </a>
+            <div class="nav-links">
+                <a href="#painel" class="nav-link">Painel</a>
+                <a href="#meus-exercicios" class="nav-link">Meus Exercícios</a>
+                <a href="#criar-exercicio" class="nav-link">Criar Exercício</a>
+                <a href="#meus-treinos" class="nav-link">Meus Treinos</a>
+                <a href="#criar-treino" class="nav-link">Criar Treino</a>
+                <a href="#biblioteca" class="nav-link">Biblioteca</a>
+                <a href="#perfil" class="nav-link">Perfil</a>
+                <div class="btn-entrar" id="btn-entrar" style="margin-left: 1rem;">
+                            <a href="#login" class="btn btn-secondary nav-link">Entrar</a>
+                </div>
+                <button onclick="sair()" class="btn btn-secondary nav-link" style="margin-left: 1rem;">Sair</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="inicio" class="page">
+        <div class="hero">
+            <div class="container hero-content">
+                <h1 class="hero-title">Seu App de Treinos <span class="text-primary">Personalizados</span></h1>
+                <p class="hero-description">
+                    Crie, gerencie e acompanhe seus treinos de musculação de forma simples e eficiente. Monte sua rotina personalizada e alcance seus objetivos fitness.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#login" class="btn btn-primary btn-large" id="comecar-agora">
+                        Começar Agora <i class="fas fa-arrow-right btn-icon"></i>
+                    </a>
+                    <a href="index.html" class="btn btn-secondary btn-large">Saiba Mais <i class="fas fa-book-open btn-icon"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tudo que você precisa para treinar</h2>
+                    <p class="section-description">Ferramentas completas para criar, organizar e executar seus treinos de forma profissional.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-dumbbell feature-icon text-primary"></i>
+                        <h3 class="feature-title">Treinos Personalizados</h3>
+                        <p class="feature-description">Crie treinos sob medida para seus objetivos e nível de condicionamento físico.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-book feature-icon text-primary"></i>
+                        <h3 class="feature-title">Biblioteca de Exercícios</h3>
+                        <p class="feature-description">Acesse uma vasta biblioteca de exercícios ou crie seus próprios exercícios personalizados.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line feature-icon text-primary"></i>
+                        <h3 class="feature-title">Acompanhe seu Progresso</h3>
+                        <p class="feature-description">Monitore sua evolução e veja seus resultados ao longo do tempo.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users feature-icon text-primary"></i>
+                        <h3 class="feature-title">Comunidade Ativa</h3>
+                        <p class="feature-description">Compartilhe treinos com outros usuários e descubra novas rotinas de exercícios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Por que escolher o MyDumbbell?</h2>
+                    <p class="section-description">Nossa plataforma foi desenvolvida pensando na simplicidade e eficiência, oferecendo todas as ferramentas necessárias para você criar e gerenciar seus treinos de forma profissional.</p>
+                </div>
+                <div class="benefits-list">
+                    <div class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> <span class="benefit-text">Interface intuitiva e fácil de usar</span></div>
+                    <div class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> <span class="benefit-text">Treinos adaptados ao seu nível</span></div>
+                    <div class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> <span class="benefit-text">Exercícios com instruções detalhadas</span></div>
+                    <div class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> <span class="benefit-text">Acesso a treinos pré-montados</span></div>
+                    <div class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> <span class="benefit-text">Criação de exercícios personalizados</span></div>
+                    <div class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> <span class="benefit-text">Totalmente gratuito</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <div class="container">
+                <h2 class="cta-title">Comece hoje mesmo!</h2>
+                <p class="cta-description">Junte-se a milhares de pessoas que já estão transformando seus treinos com o MyDumbbell. É rápido, fácil e totalmente gratuito.</p>
+                <a href="#login" class="btn btn-secondary btn-large" id="criar-conta-btn">Criar Conta Grátis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login/Registro -->
+    <section id="login" class="page hidden">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <a href="#inicio" class="logo" style="justify-content: center; margin-bottom: 1rem;">
+                        <i class="fas fa-dumbbell logo-icon"></i>
+                        My<span class="logo-text">Dumbbell</span>
+                    </a>
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" id="aba-login">Entrar</button>
+                        <button class="auth-tab" id="aba-registro">Registrar</button>
+                    </div>
+                </div>
+                <form id="form-autenticacao">
+                    <div class="form-group hidden" id="campo-nome">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" id="senha" name="senha" class="form-input" placeholder="Sua senha" required>
+                    </div>
+                    <div class="form-group hidden" id="campo-confirmar-senha">
+                        <label for="confirmar-senha" class="form-label">Confirmar Senha</label>
+                        <input type="password" id="confirmar-senha" name="confirmar-senha" class="form-input" placeholder="Confirme sua senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full mt-4" id="btn-enviar-autenticacao">Entrar</button>
+                </form>
+                <div class="auth-footer">
+                    <a href="#inicio" class="back-link">← Voltar para página inicial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="painel" class="page hidden">
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Olá, Usuário! 👋</h1>
+                <p class="dashboard-subtitle">Bem-vindo de volta ao seu painel de controle de treinos.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-dumbbell text-primary"></i></div>
+                    <div class="stat-content">
+                        <div class="stat-label">Exercícios Criados</div>
+                        <div class="stat-value" id="total-exercicios">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon2"><i class="fas fa-running text-primary"></i></div>
+                    <div class="stat-content">
+                        <div class="stat-label">Treinos Montados</div>
+                        <div class="stat-value" id="total-treinos">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon2"><i class="fas fa-calendar-alt text-primary"></i></div>
+                    <div class="stat-content">
+                        <div class="stat-label">Sessões Concluídas</div>
+                        <div class="stat-value">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Ações Rápidas</h2>
+                <div class="quick-actions-grid">
+                    <a href="#criar-exercicio" class="quick-action-card">
+                        <div class="quick-action-icon"><i class="fas fa-plus text-primary"></i></div>
+                        <div class="quick-action-content">
+                            <h3 class="feature-title">Criar Exercício</h3>
+                            <p class="feature-description">Adicione um novo exercício à sua biblioteca.</p>
+                        </div>
+                    </a>
+                    <a href="#criar-treino" class="quick-action-card">
+                        <div class="quick-action-icon"><i class="fas fa-plus text-primary"></i></div>
+                        <div class="quick-action-content">
+                            <h3 class="feature-title">Criar Treino</h3>
+                            <p class="feature-description">Monte um novo treino com seus exercícios.</p>
+                        </div>
+                    </a>
+                    <a href="#meus-treinos" class="quick-action-card">
+                        <div class="quick-action-icon"><i class="fas fa-list text-primary"></i></div>
+                        <div class="quick-action-content">
+                            <h3 class="feature-title">Meus Treinos</h3>
+                            <p class="feature-description">Gerencie seus treinos criados.</p>
+                        </div>
+                    </a>
+                    <a href="#biblioteca" class="quick-action-card">
+                        <div class="quick-action-icon"><i class="fas fa-book text-primary"></i></div>
+                        <div class="quick-action-content">
+                            <h3 class="feature-title">Biblioteca</h3>
+                            <p class="feature-description">Explore treinos prontos e exercícios.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagina meus exercicios -->
+    <section id="meus-exercicios" class="page hidden">
+        <div class="page-container">
+            <div class="page-header">
+                <h1 class="page-title">Meus Exercícios</h1>
+                <p class="page-description">Gerencie os exercícios que você criou e adicionou à sua biblioteca.</p>
+            </div>
+            <div class="filters-section">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="buscar-meus-exercicios" class="form-label">Buscar Exercício</label>
+                        <input type="text" id="buscar-meus-exercicios" class="form-input" placeholder="Nome do exercício...">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filtrar-meus-exercicios-grupo" class="form-label">Grupo Muscular</label>
+                        <select id="filtrar-meus-exercicios-grupo" class="form-select">
+                            <option>Todos os grupos</option>
+                            <option>Peito</option>
+                            <option>Costas</option>
+                            <option>Pernas</option>
+                            <option>Ombros</option>
+                            <option>Braços</option>
+                            <option>Abdômen</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="exercises-grid" id="lista-meus-exercicios">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagina criar exercicio -->
+    <section id="criar-exercicio" class="page hidden">
+        <div class="page-container">
+            <div class="page-header">
+                <h1 class="page-title">Criar Novo Exercício</h1>
+                <p class="page-description">Preencha os detalhes para adicionar um novo exercício à sua biblioteca.</p>
+            </div>
+            <form id="form-criar-exercicio" class="form-container">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nome-exercicio" class="form-label">Nome do Exercício</label>
+                        <input type="text" id="nome-exercicio" name="nome-exercicio" class="form-input" placeholder="Ex: Supino Reto com Halteres" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="grupo-muscular-exercicio" class="form-label">Grupo Muscular Principal</label>
+                        <select id="grupo-muscular-exercicio" name="grupo-muscular-exercicio" class="form-select" required>
+                            <option value="">Selecione o Grupo</option>
+                            <option>Peito</option>
+                            <option>Costas</option>
+                            <option>Pernas</option>
+                            <option>Ombros</option>
+                            <option>Braços</option>
+                            <option>Abdômen</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="descricao-exercicio" class="form-label">Descrição Curta</label>
+                    <input type="text" id="descricao-exercicio" name="descricao-exercicio" class="form-input" placeholder="Ex: Exercício composto para o peitoral." required>
+                </div>
+                <div class="form-group">
+                    <label for="instrucoes-exercicio" class="form-label">Instruções Detalhadas</label>
+                    <textarea id="instrucoes-exercicio" name="instrucoes-exercicio" class="form-textarea" placeholder="Passo a passo de como executar o exercício..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="exercicio-publico" class="form-checkbox">
+                        <span class="checkbox-text">Tornar este exercício público (visível na biblioteca)</span>
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Criar Exercício</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- página meus treinos-->
+    <section id="meus-treinos" class="page hidden">
+        <div class="page-container">
+            <div class="page-header">
+                <h1 class="page-title">Meus Treinos</h1>
+                <p class="page-description">Gerencie os treinos que você montou e agendou.</p>
+            </div>
+            <div class="filters-section">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="buscar-meus-treinos" class="form-label">Buscar Treino</label>
+                        <input type="text" id="buscar-meus-treinos" class="form-input" placeholder="Nome do treino...">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filtrar-meus-treinos-dificuldade" class="form-label">Dificuldade</label>
+                        <select id="filtrar-meus-treinos-dificuldade" class="form-select">
+                            <option>Todas as dificuldades</option>
+                            <option>Iniciante</option>
+                            <option>Intermediário</option>
+                            <option>Avançado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="workouts-grid" id="lista-meus-treinos">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagina criar treino -->
+    <section id="criar-treino" class="page hidden">
+        <div class="page-container">
+            <div class="page-header">
+                <h1 class="page-title">Criar Novo Treino</h1>
+                <p class="page-description">Monte seu treino personalizado selecionando seus exercícios.</p>
+            </div>
+            <form id="form-criar-treino" class="form-container">
+                <div class="form-grid-2-1">
+                    <!-- Coluna 1: Detalhes do Treino -->
+                    <div class="details-section">
+                        <h3 class="subsection-title">Detalhes e Agendamento</h3>
+                        <div class="form-group">
+                            <label for="nome-treino" class="form-label">Nome do Treino</label>
+                            <input type="text" id="nome-treino" name="nome-treino" class="form-input" placeholder="Ex: Full Body Força A" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descricao-treino" class="form-label">Descrição Curta</label>
+                            <input type="text" id="descricao-treino" name="descricao-treino" class="form-input" placeholder="Ex: Treino de corpo inteiro focado em força." required>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="dificuldade-treino" class="form-label">Dificuldade</label>
+                                <select id="dificuldade-treino" name="dificuldade-treino" class="form-select" required>
+                                    <option value="">Selecione a Dificuldade</option>
+                                    <option>Iniciante</option>
+                                    <option>Intermediário</option>
+                                    <option>Avançado</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="duracao-treino" class="form-label">Duração Estimada (min)</label>
+                                <input type="number" id="duracao-treino" name="duracao-treino" class="form-input" value="60" min="1" required>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="dia-treino" class="form-label">Dia da Semana</label>
+                                <select id="dia-treino" name="dia-treino" class="form-select" required>
+                                    <option value="">Selecione o Dia</option>
+                                    <option value="Segunda-feira">Segunda-feira</option>
+                                    <option value="Terça-feira">Terça-feira</option>
+                                    <option value="Quarta-feira">Quarta-feira</option>
+                                    <option value="Quinta-feira">Quinta-feira</option>
+                                    <option value="Sexta-feira">Sexta-feira</option>
+                                    <option value="Sábado">Sábado</option>
+                                    <option value="Domingo">Domingo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="hora-treino" class="form-label">Horário</label>
+                                <input type="time" id="hora-treino" name="hora-treino" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="treino-publico" class="form-checkbox">
+                                <span class="checkbox-text">Tornar este treino público (visível para outros usuários)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Coluna 2: Seleção de Exercícios -->
+                    <div class="exercises-selection-section">
+                        <h3 class="subsection-title">Exercícios do Treino</h3>
+                        <div class="exercises-container">
+                            <div class="available-exercises-column">
+                                <h3 class="subsection-title">Disponíveis</h3>
+                                <div class="form-group" style="margin-bottom: var(--spacing-4);">
+                                    <input type="text" id="buscar-exercicios-disponiveis" class="form-input" placeholder="Buscar exercício...">
+                                </div>
+                                <div class="exercises-list" id="lista-exercicios-disponiveis">
+                                    <div class="empty-state-small">
+                                        <h3 class="empty-title">Nenhum exercício disponível</h3>
+                                        <p class="empty-description">Crie exercícios primeiro para poder adicioná-los aos treinos.</p>
+                                        <a href="#criar-exercicio" class="btn btn-primary">Criar Exercício</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selected-exercises-column">
+                                <h3 class="subsection-title">Selecionados</h3>
+                                <div class="selected-exercises-list" id="lista-exercicios-selecionados">
+                                    <div class="empty-state-small">
+                                        <p>Nenhum exercício adicionado. Selecione exercícios na lista ao lado</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="mostrarPagina('meus-treinos')">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Criar Treino</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pagina biblioteca -->
+    <section id="biblioteca" class="page hidden">
+        <div class="page-container">
+            <div class="page-header">
+                <h1 class="page-title">Biblioteca de Treinos</h1>
+                <p class="page-description">Explore treinos criados pela comunidade e adicione aos seus favoritos.</p>
+            </div>
+
+            <div class="filters-section">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="buscar-treinos-biblioteca" class="form-label">Buscar Treino</label>
+                        <input type="text" id="buscar-treinos-biblioteca" class="form-input" placeholder="Nome do treino...">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filtrar-biblioteca-dificuldade" class="form-label">Dificuldade</label>
+                        <select id="filtrar-biblioteca-dificuldade" class="form-select">
+                            <option>Todas as dificuldades</option>
+                            <option>Iniciante</option>
+                            <option>Intermediário</option>
+                            <option>Avançado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="workouts-grid" id="lista-treinos-biblioteca">
+            </div>
+        </div>
+    </section>
+
+    <!-- pagina de perfil -->
+    <section id="perfil" class="page hidden">
+        <div class="page-container">
+            <div class="page-header">
+                <h1 class="page-title">Meu Perfil</h1>
+                <p class="page-description">Informações da sua conta e estatísticas de uso.</p>
+            </div>
+            <div class="profile-container">
+                <div class="profile-header">
+                    <i class="fas fa-user-circle" style="font-size: 3rem; color: var(--gray-400);"></i>
+                    <h2 id="nome-perfil" class="profile-name">Nome do Usuário</h2>
+                    <p id="email-perfil" class="profile-email">email@exemplo.com</p>
+                </div>
+                <div class="stats-section">
+                    <h3 class="subsection-title">Estatísticas</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-label">Membro Desde</div>
+                                <div class="stat-value" id="membro-desde">Jan 2024</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-label">Treinos Criados</div>
+                                <div class="stat-value" id="total-treinos-perfil">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-label">Exercícios Personalizados</div>
+                                <div class="stat-value" id="total-exercicios-perfil">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-label">Conteúdo Público</div>
+                                <div class="stat-value" id="conteudo-publico-perfil">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2025 MyDumbbell. Todos os direitos reservados.</p>
+            <!-- Export / Import -->
+            <div style="margin-top: 0.5rem;">
+                <button type="button" class="btn btn-secondary" onclick="exportarDadosParaArquivo()">Exportar Dados (.js)</button>
+                <button type="button" class="btn btn-secondary" onclick="abrirImportadorDeArquivo()">Importar Dados (.js)</button>
+                <input type="file" id="import-file" accept=".js,application/javascript,application/json" style="display:none"
+                       onchange="(function(e){ const f = e.target.files && e.target.files[0]; tratarArquivoImportado(f); e.target.value=''; })(event)">
+            </div>
+        </div>
+    </footer>
+
+    <script src="storage.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
