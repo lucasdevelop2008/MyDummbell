@@ -44,23 +44,26 @@ CSS e JavaScript.
 1.  Clone o repositório:
 
 ```{=html}
-<!-- -->
-```
+
     git clone https://github.com/lucasdevelop2008/MyDummbell.git
+
+```
 
 2.  Entre na pasta:
 
 ```{=html}
-<!-- -->
-```
+
     cd MyDummbell
+
+```
 
 3.  Abra o arquivo:
 
 ```{=html}
-<!-- -->
-```
+
     index.html
+
+```
 
 Ou utilize a extensão Live Server no VS Code.
 
